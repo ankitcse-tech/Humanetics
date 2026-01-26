@@ -1,0 +1,87 @@
+﻿@using System.Data
+@{
+    ViewBag.Title = "Applicationdetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row py-2">
+        <div class="col-sm-12">
+            <p class="fs-3 text-center fst-italic">
+                All Application Received Via <b class="text-mycolor"> User</b>
+            </p>
+            <hr class="mx-auto w-30" />
+        </div>
+        <div class="col-sm-12" style="overflow-x:scroll">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>SR</th>
+                        <th>Job ID</th>
+                        <th>User Name</th>
+                        <th>Mobile No.</th>
+                        <th>Email ID</th>
+                        <th>Address</th>
+                        <th>Qualification</th>
+                        <th>Experience</th>
+                        <th>Salary</th>
+                        <th>Gender</th>
+                        <th>Resume</th>
+                        <th>Profile Photo</th>
+                        <th>Application Date</th>
+                        <th>Status</th>
+                        <th>Is Hired</th>
+                        <th>Is Rejected</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (DataRow r in ViewBag.application.Rows)
+                    {
+                        <tr>
+                            <td>1</td>
+                            <td>@r["JobID"]</td>
+                            <td>@r["NAME"]</td>
+                            <td>@r["MobNo"]</td>
+                            <td>@r["EmailID"]</td>
+                            <td>@r["ADDRESS"]</td>
+                            <td>@r["QUALIFICATION"]</td>
+                            <td>@r["EXP"]</td>
+                            <td>@r["SALARY"]</td>
+                            <td>@r["GENDER"]</td>
+                            <td>
+                                <a href="~/Content/resume/@r["RESUME"]">
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <img href="~/Content/profile/@r["PICTURE"]"
+                                     style="height:50px; width:50px; border-radius:50% " />
+                            </td>
+                            <td>@r["RegDate"]</td>
+                            <td>@r["STATUS"]</td>
+                            <td>
+                                @r["ISHIRED"]
+                            @if (Convert.ToBoolean(r["ISHIRED"]) == false && Convert.ToBoolean(r["ISREJECTED"]) == false)
+                            {
+                                <a onclick="return confirm('Do you really want to hire him?')" href="/admin/hired?email=@r["EMAILID"]&appid=@r["ID"]">
+                                    <span class="badge bg-success">Mark as Hired</span>
+                                </a>
+                            }
+                            </td>
+                            <td>
+                                @r["ISREJECTED"]
+                                @if (Convert.ToBoolean(r["ISHIRED"]) == false && Convert.ToBoolean(r["ISREJECTED"]) == false)
+                                { 
+                                    <a onclick="return confirm('Do you really want to reject him?')" href="/admin/rejected?appid=@r["ID"]">
+                                        <span class="badge bg-danger">Mark as Rejected</span>
+                                    </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

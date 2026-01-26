@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<form method="post">
+    <div class="container-fluid">
+        <div class="row py-2">
+            @*<p class="fs-3 text-center fw-semibold ">Contact<b class="text-primary"> Us</b></p>*@
+            <p class="fs-3 text-center fw-semibold">
+                Contact<b class="text-primary"> Us</b><br />
+                <span class="fs-5">Reach Out to HumaNetics Anytime</span>
+                <hr class="w-25 mx-auto" />
+            </p>
+            <div class="col-sm-10 mx-auto">
+                <div class="row py-3">
+                    <div class="col-sm-6 p-3 shadow-lg">
+                        <div class="input-group flex-nowrap shadow-lg">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user text-primary"></i></span>
+                            <input type="text" name="name" class="form-control" placeholder="Enter Your Name" aria-label="Username" aria-describedby="addon-wrapping" required>
+                        </div>
+                        <div class="input-group flex-nowrap mt-3 shadow-lg">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-envelope text-primary"></i></span>
+                            <input type="email" name="email" class="form-control" placeholder="Enter Your email" aria-label="Username" aria-describedby="addon-wrapping" required>
+                        </div>
+                        <div class="input-group flex-nowrap mt-3 shadow-lg">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-phone text-primary"></i></span>
+                            <input type="number" name="mob" class="form-control" placeholder="Enter Your Mobile Number" aria-label="Username" aria-describedby="addon-wrapping" required />
+                        </div>
+                        <textarea class="form-control mt-3" name="msg" placeholder="Enter Your message" required></textarea>
+                        <input type="submit" value="Submit Now" class="form-control mt-2 bg-mycolor" />
+                    </div>
+                    <div class="col-sm-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.4280470433882!2d82.41332039999999!3d25.690248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399010461cb2eaa3%3A0x12dc3b7472af77ed!2sRD%20Memorial%20Public%20School!5e0!3m2!1sen!2sin!4v1753786867025!5m2!1sen!2sin" height="280" class="w-100" style="border:0;" allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

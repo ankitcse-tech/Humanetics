@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "Apply";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row py-2">
+            <p class="fs-3 text-center fw-semibold">Apply for<b class="text-primary"> a Job</b></p>
+            <div class="col-sm-10 mx-auto">
+                <div class="row py-3">
+                    <div class="col-sm-8 mx-auto "
+                         style="background-color:white">
+                        <div class="card shadow-lg mx-auto border-0 p-2">
+                            <div class="row g-0">
+                                <div class="col-sm-6 pe-1">
+                                    Job ID: <span class="text-danger">@Request.QueryString["TITLE"]</span>
+                                    <!--Input start-->
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-address-card text-primary"></i></span>
+                                        <input type="text" required name="jobid" value="@Request.QueryString["JOBID"]" readonly class="form-control" placeholder="Enter Your Job ID" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                                <div class="col-sm-6 ps-1">
+                                    <!--Input start-->
+                                    Name
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user text-primary"></i></span>
+                                        <input type="text" required name="name" class="form-control" placeholder="Enter Your Name" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-sm-6 pe-1">
+                                    <!--Input start-->
+                                    Mobile Number
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-phone text-primary"></i></span>
+                                        <input type="number" required name="mob" class="form-control" placeholder="Enter Your Mob No." aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                                <div class="col-sm-6 ps-1">
+                                    <!--Input start-->
+                                    Email ID
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-envelope text-primary"></i></span>
+                                        <input type="email" required name="email" class="form-control" placeholder="Enter Your Email ID" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-sm-6 pe-1">
+                                    <!--Input start-->
+                                    Address
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-location-dot text-primary"></i></span>
+                                        <input type="text" required name="address" class="form-control" placeholder="Enter Your Address" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                                <div class="col-sm-6 ps-1">
+                                    <!--Input start-->
+                                    Qualification
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-graduation-cap text-primary"></i></span>
+                                        <input type="text" required name="qualification" class="form-control" placeholder="Enter Your Highest Qualification" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-sm-6 pe-1">
+                                    <!--Input start-->
+                                    Experience
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user-tie text-primary"></i></span>
+                                        <input type="text" required name="exp" class="form-control" placeholder="Enter Your Expeience" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                                <div class="col-sm-6 ps-1">
+                                    <!--Input start-->
+                                    Salary
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-money-bill-1 text-primary"></i></span>
+                                        <input type="number" required name="salary" class="form-control" placeholder="Enter Your Salary" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-sm-6 pe-1">
+                                    <!--Input start-->
+                                    Select Your
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        Gender
+                                        <span class="px-3">Male<input type="radio" name="gender" value="Male" /></span>
+                                        <span class="px-3">Female<input type="radio" name="gender" value="Female" /></span>
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                                <div class="col-sm-6 ps-1">
+                                    <!--Input start-->
+                                    Upload Resume
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-file-pdf text-primary"></i></span>
+                                        <input type="file" required name="resume" class="form-control" placeholder="Upload Resume" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-sm-6 pe-1">
+                                    <!--Input start-->
+                                    Upload Profile Picture
+                                    <div class="input-group flex-nowrap shadow-lg mb-2">
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-camera-retro text-primary"></i></span>
+                                        <input type="file" required name="profile" class="form-control" placeholder="Upload Profile" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <!--Input End-->
+                                </div>
+                                <div class="col-sm-6 ps-1 mt-4">
+                                    <input type="submit" value="Apply Now" class="form-control bg-info text-light" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@*MAKE A FORM--->
+
+    Job ID
+    Name
+    Mobile No
+    Email id
+    Address
+    Highest Qualificaton
+    Experience
+    Salary
+    Upload Resume*@
+
+

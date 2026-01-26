@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<div class="container-fluid">
+<!--Start Slider-->
+<div class="row slider">
+    <div class="col-sm-12 p-0">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/Content/images/building.jpg" class="d-block w-100 img-fluid sliderimg" alt="Loading image">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/images/gallery1.jpg" class="d-block w-100 img-fluid sliderimg" alt="Loading image">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/images/gallery5.jpg" class="d-block w-100 img-fluid sliderimg" alt="loading image">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!--end slider-->
+<!--Start About-->
+<div class="row py-5" style="background: #00ffff00; text-align: justify;">
+
+    <!--Start Heading-->
+    <p class="fs-3 text-center">
+        About<b class="text-mycolor"> Us</b><br />
+        <span class="fs-5">Smart solutions for smarter workforce management</span>
+        <hr class="w-25 mx-auto" />
+    </p>
+    <!--End Heading-->
+
+    <div class="col-sm-10 mx-auto">
+        <div class="row py-3">
+            <div class="col-sm-6 p-3">
+                <p class="fs-3 mb-3">Welcome to <b class="text-mycolor">HumaNetics</b></p>
+                <p class="fst-italic text-muted mb-2">"Transforming Spaces with Style & Precision"</p>
+                <p>HumaNetics is a forward-thinking interior design and development company, passionate about transforming spaces into inspiring environments. With expertise in modern aesthetics, we bring creativity and structure together for the perfect blend.</p>
+                <a href="/Home/About" class="btn btn-danger mt-3">Read More</a>
+            </div>
+            <div class="col-sm-6 px-4 py-2">
+                <!--interior image-->
+                <img src="~/Content/images/team1.jpg" class="img-thumbnail" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--end about-->
+<!--Start Services-->
+<div class="row py-5">
+
+    <!--Start Heading-->
+    <p class="fs-3 text-center">
+        Our<b class="text-mycolor"> Services </b><br />
+        <span class="fs-5">Delivering efficiency through innovative services</span>
+        <hr class="w-25 mx-auto" />
+    </p>
+    <!--End Heading-->
+
+    <div class="col-sm-10 mx-auto">
+        <div class="row py-3">
+            <div class="col-sm-3">
+                <div class="card mx-auto shadow-lg p-2 servicescard border border-0">
+                    <img src="~/Content/images/service1.jpg" class="card-img-top img-fluid servicesimg" alt="Loading image">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Recruitment</h5>
+                        <p class="card-text">Easily apply for jobs and track your application status with our intelligent hiring system.</p>
+                        <a href="#" class="btn btn-danger">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card mx-auto shadow-lg p-2 servicescard border border-0">
+                    <img src="~/Content/images/dashboard.jpg" class="card-img-top img-fluid servicesimg" alt="Loading image">
+                    <div class="card-body">
+                        <h5 class="card-title">Employee Dashboard</h5>
+                        <p class="card-text">Access your personal profile, view attandance, apply for leave and manage your details - all in one place</p>
+                        <a href="#" class="btn btn-danger">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card mx-auto shadow-lg p-2 servicescard border border-0">
+                    <img src="~/Content/images/notification.jpg" class="card-img-top img-fluid servicesimg" alt="Loading image">
+                    <div class="card-body">
+                        <h5 class="card-title">Live Notifications & Updates </h5>
+                        <p class="card-text">Stay informed with real-time updates on job openings, leave status and HR announcements</p>
+                        <a href="#" class="btn btn-danger">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card mx-auto shadow-lg p-2 servicescard border border-0">
+                    <img src="~/Content/images/salary.jpg" class="card-img-top img-fluid servicesimg" alt="Loading image">
+                    <div class="card-body">
+                        <h5 class="card-title">Salary Management</h5>
+                        <p class="card-text">Check your salary slips and payment history anytime with our secure payroll saystem </p>
+                        <a href="#" class="btn btn-danger">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end services-->
+<!--Facts start-->
+<div class="row py-5 fact" style="background: #99ffff; text-align:justify;">
+    <!--Start Heading-->
+    <p class="fs-3 text-center">
+        Top<b @*class="text-mycolor"*@ style="color: #5bf6d9 "> Facts </b><br />
+        <span class="fs-5">Discover the Strength Behind HumaNetics</span>
+        <hr class="w-25 mx-auto" />
+    </p>
+    <!--End Heading-->
+    <div class="col-sm-10 mx-auto">
+        <div class="row py-3">
+            <div class="col-sm-4">
+                <div class="mx-auto factic text-center"><i class="fa-brands fa-facebook-square text-primary fs-2 ic"></i></div>
+                <h3 class="text-center mt-2">Connect With Us Facebook</h3>
+                <p class="text-center">Follow on us Facebook to stay update with our letest tools, feature, and update in the employee Management System.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="mx-auto factic text-center"><i class="fa-brands fa-square-instagram text-danger fs-2 ic"></i></div>
+                <h3 class="text-center mt-2">Explore on Instagram</h3>
+                <p class="text-center">Get a visual tour of your system's design, UI\UX,and how organizations are using our software daily.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="mx-auto factic text-center"><i class="fa-brands fa-square-twitter text-info fs-2 ic"></i></div>
+                <h3 class="text-center mt-2">Follow for Quick Updates</h3>
+                <p class="text-center">Stay in the loop with real-time updates,features drops, and productivity hacks for managing employees better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Facts end-->
+<!--Gallery start-->
+<div class="row py-5 gallery">
+    <!--Start Heading-->
+    <p class="fs-3 text-center">
+        Interior<b class="text-mycolor"> Gallery </b><br />
+        <span class="fs-5">Explore the Professional Interiors of HumaNetics</span>
+        <hr class="w-25 mx-auto" />
+    </p>
+    <!--End Heading-->
+    <div class="col-sm-10 mx-auto">
+        <div class="row py-3">
+            <div class="col-sm-4 p-2">
+                <img src="~/Content/images/gallery3.jpg" class="img-thumbnail imgpic w-100" />
+            </div>
+            <div class="col-sm-4 p-2">
+                <img src="~/Content/images/gallery1.jpg" class="img-thumbnail imgpic w-100" />
+            </div>
+            <div class="col-sm-4 p-2">
+                <img src="~/Content/images/gallery2.jpg" class="img-thumbnail imgpic w-100" />
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-sm-4 p-2">
+                <img src="~/Content/images/gallery5.jpg" class="img-thumbnail imgpic w-100" />
+            </div>
+            <div class="col-sm-4 p-2">
+                <img src="~/Content/images/office1.jpg" class="img-thumbnail imgpic w-100" />
+            </div>
+            <div class="col-sm-4 p-2">
+                <img src="~/Content/images/gallery6.jpg" class="img-thumbnail imgpic w-100" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--Gallery end-->
+</div>
+
+

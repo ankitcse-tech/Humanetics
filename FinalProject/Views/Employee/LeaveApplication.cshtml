@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "LeaveApplication";
+    Layout = "~/Views/Shared/_Employeelayout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row py-2">
+            <div class="col-sm-12">
+                <p class="fs-3 text-center fw-semibold">
+                    Apply for <b class="text-mycolor">
+                        Leave
+                    </b>
+                </p>
+                <hr class="mx-auto w-30" />
+            </div>
+            <!--Application form Start-->
+            <div class="col-sm-6 mt-3 shadow p-3 mb-5 bg-white rounded mx-auto">
+                <h4 class="text-center fw-semibold">Leave Application</h4>
+                <div class="form-floating mb-3">
+                    <input type="text" required name="subject" class="form-control" id="floatingsubject" placeholder="name@example.com" />
+                    <label for="floatingsubject">Leave Subject</label>
+                </div>
+
+
+                <div class="form-floating ">
+                    <textarea class="form-control" required name="detail" id="floatingsubject" placeholder="Leave a comment here" id="floatingTDetails" style="height:200px; resize:none"></textarea>
+                    <label for="floatingTDetails">Leave Deatils</label>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input type="date" name="fromdate" required class="form-control" id="floatingform" placeholder="name@example.com" />
+                    <label for="floatingform">From Date</label>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input type="date" name="todate" required class="form-control" id="floatingto" placeholder="name@example.com" />
+                    <label for="floatingto">To Date</label>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input type="file" name="file" class="form-control" id="floatingfile" placeholder="name@example.com" />
+                    <label for="floatingfile">Attachment (If any)</label>
+                </div>
+
+                <input type="submit" class="btn btn-dange" value="Send Application" />
+
+            </div>
+            <!--Application form End-->
+        </div>
+    </div>
+</form>
+

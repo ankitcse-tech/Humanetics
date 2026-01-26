@@ -1,0 +1,42 @@
+﻿@using System.Data
+@{
+    ViewBag.Title = "Enquiry";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row py-2">
+    <div class="col-sm-12">
+        <p class="fs-3 text-center fst-italic">
+            All Job <b class="text-mycolor">Posted Enquiry</b>
+        </p>
+        <hr class="mx-auto w-30" />
+    </div>
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Enquiry ID</th>
+                    <th>Name</th>
+                    <th>Mobile No.</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Enquiry Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataRow row in ViewBag.opening.Rows)
+                {
+                    <tr>
+                        <td>@row["ID"]</td>
+                        <td>@row["NAME"]</td>
+                        <td>@row["MOBILE"]</td>
+                        <td>@row["EMAIL"]</td>
+                        <td>@row["MESSAGE"]</td>
+                        <td>@row["ENQDATE"]</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

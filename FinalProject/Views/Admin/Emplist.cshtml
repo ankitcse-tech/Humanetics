@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Emplist";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row py-2">
+        <div class="col-sm-12">
+            <p class="fs-3 text-center fst-italic">
+                All Employee <b class="text-mycolor">List</b>
+            </p>
+            <hr class="mx-auto w-30" />
+        </div>
+    </div>
+    <!--TBL_APPLICATION DELETE ALL , TBL_EMPLOGIN -delete all-->
+            <div class="row">
+                <div class="col-sm-10 mt-2 mx-auto">
+                    <div class="row">
+                        @foreach (System.Data.DataRow row in ViewBag.employee.Rows)
+                        {
+                        <!--Employee Card Start-->
+                        <div class="col-sm-3 shadow p-3 mb-5 bg-white rounded">
+                            <div class="card" style="">
+                                <img src="~/Content/images/@row["picture"]" class="card-img-top" alt="loading" />
+                                <div class="card-body">
+                                    <h5 class="card-title">@row["name"]</h5>
+                                    <p class="card-text">
+                                        <i class="fa-solid fa-envelope text-primary"></i>@row["emailid"]<br />
+                                        <span class="text-secondary">
+                                            <small>
+                                                <i class="fa-solid fa-phone text-primary"></i>@row["mobno"]<br />
+                                                <i class="fa-solid fa-user text-primary"></i>@row["gender"]<br />
+                                                <i class="fa-solid fa-money-bill-1 text-primary"></i>@row["salary"]<br />
+                                                <i class="fa-solid fa-location text-primary"></i>@row["address"]<br />
+                                                <i class="fa fa-graduation-cap text-primary"></i>@row["exp"]<br />
+                                                <i class="fa fa-graduation-cap text-primary"></i>
+                                                @row["qualification"]
+                                            </small>
+                                        </span>
+                                        <a href="~/Content/resume/@row["resume"]"><span class="badge bg-danger">Download Resume</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Employee Card End-->
+                        }
+                    </div>
+                 </div>
+            </div>
+</div>
+

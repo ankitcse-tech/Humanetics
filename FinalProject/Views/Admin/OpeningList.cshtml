@@ -1,0 +1,61 @@
+﻿@using System.Data
+@{
+    ViewBag.Title = "OpeningList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row py-2">
+    <div class="col-sm-12">
+        <p class="fs-3 text-center fst-italic">
+            Our Current <b class="text-mycolor">All Job Opening</b>
+        </p>
+        <hr class="mx-auto w-30" />
+    </div>
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>SR</th>
+                    <th>Job ID</th>
+                    <th>Job Title</th>
+                    <th>Details</th>
+                    <th>Job Type</th>
+                    <th>City</th>
+                    <th>Min Salary</th>
+                    <th>Max Salary</th>
+                    <th>Gender</th>
+                    <th>Shift</th>
+                    <th>Experience</th>
+                    <th>Education</th>
+                    <th>Vacancy</th>
+                    <th>Added On</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataRow row in ViewBag.opening.Rows)
+                {
+                    <tr>
+                        <td>1</td>
+                        <td>@row["ID"]</td>
+                        <td>@row["TITLE"]</td>
+                        <td>@row["DETAILS"]</td>
+                        <td>@row["JOBTYPE"]</td>
+                        <td>@row["CITY"]</td>
+                        <td>@row["MINSALARY"]</td>
+                        <td>@row["MAXSALARY"]</td>
+                        <td>@row["GENDER"]</td>
+                        <td>@row["SHIFT"]</td>
+                        <td>@row["EXP"]</td>
+                        <td>@row["EDUCATION"]</td>
+                        <td>@row["VACANCY"]</td>
+                        <td>@row["STARTDATE"]</td>
+                        <td>@row["LASTDATE"]</td>
+                        <td>@row["STATUS"]</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

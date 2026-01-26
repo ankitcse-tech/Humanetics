@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+    @if (Session["emp"]==null)
+                {
+                    <script>
+                        alert('Login first');
+                        location.href='/home/emplogin'
+                    </script>
+                }
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link href="~/Content/css/all.css" rel="stylesheet" />
+        <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="~/Content/js/bootstrap.bundle.js"></script>
+        <style>
+
+            .bg-mycolor {
+                background: #00ffff;
+            }
+
+            .text-mycolor {
+                color: #00ffff !important;
+                /*color: #5bf6d9 !important;*/
+            }
+            .header {
+                min-height: 50px;
+                padding-top: 10px;
+            }
+
+            .dashdiv {
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+
+            .dashic {
+                height: 55px;
+                width: 55px;
+                border-radius: 8px;
+                border: 1px solid black;
+                padding: 5px;
+                line-height: 45px;
+                font-size: 28px;
+            }
+
+            #dashcol a {
+                text-decoration: none;
+            }
+
+            .dashcard:hover {
+                transform: scale(1.1);
+                transition: 2s;
+            }
+
+            .dashcard {
+                transition: 2s;
+            }
+
+            .ic {
+                font-size: 20px;
+                height: 25px;
+                width: 25px;
+                text-align: center;
+                line-height: 25px;
+                border: 1px solid #00ffff;
+                color: #00ffff;
+                transition: .5s;
+            }
+
+                .ic:hover {
+                    transform: rotate(360deg);
+                    transition: 1.5s;
+                    background: #00ffff;
+                    color: white;
+                }
+
+            .bfooter {
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Start Header-->
+        <div class="row header shadow-lg mb-5" style="border-bottom: 5px solid #00ffff; background: #00ffff00;">
+            <div class="col-sm-10 mx-auto">
+                <div class="row py-3">
+                    <div class="col-sm-3 fs-4">
+                        Huma<b class="text-mycolor">Netics<i class="fa-solid fa-graduation-cap "></i></b>
+                    </div>
+                    <div class="col-sm-3">
+                        <b><i class="fa-solid fa-phone text-success ic"></i> Call Us</b> : <br /> 8858832962
+                    </div>
+                    <div class="col-sm-3">
+                        <b><i class="fa-solid fa-envelope text-danger ic "></i> Your email</b> : <br />
+                        <b>@Session["emp"] </b>
+                    </div>
+                    <div class="col-sm-3 pt-1 text-end"><br />
+                        <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="fa-solid fa-bars fs-5 ps-3"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--End Header-->
+
+         <!--Start menu-->
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Huma<b class="text-mycolor">Netics</b></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 ">
+                            <a style="text-decoration:none; color:black;" href="/Employee/Attendance"><i class="fa-solid fa-plus text-warning "></i> Mark Attendance</a>
+                        </li>
+
+                        <li class="list-group-item border-0">
+                            <a style="text-decoration:none; color:black;" href="/Employee/LeaveApplication"><i class="fa-solid fa-list-ul text-danger "></i> Apply for leave</a>
+                        </li>
+
+                        <li class="list-group-item border-0">
+                            <a style="text-decoration:none; color:black;" href="/Employee/LeaveApplicationStatus"><i class="fa-solid fa-file text-info"></i> Leave Status</a>
+                        </li>
+
+                        <li class="list-group-item border-0">
+                            <a style="text-decoration:none; color:black;" href="/Employee/MyProfile"><i class="fa-solid fa-list-ol text-danger"></i> My Profile</a>
+                        </li>
+
+                        <li class="list-group-item border-0">
+                            <a style="text-decoration:none; color:black;" href="/Employee/ChangePassword"><i class="fa-solid fa-file-word text-info"></i> Change Password</a>
+                        </li>
+
+                        <li class="list-group-item border-0">
+                            <a style="text-decoration:none; color:black;" href="/Employee/logout"><i class="fa-solid fa-sign-out text-warning"></i> Logout</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+            <!--End menu-->
+            <div style="min-height:700px;">
+                @RenderBody()
+            </div>
+        <div class="container-fluid">
+            <div class="row bfooter bg-dark text-light text-center bfooter border-top border-light py-3">
+                <div class="col-sm-6">Developed By : <b class="text-mycolor">Ankit</b> </div>
+                <div class="col-sm-6">
+                    Copyright &copy; To: <b class="text-mycolor">Techpile Technology Private Limited</b>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

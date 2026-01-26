@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Emplogin";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+<form method="post">
+    <div class="container-fluid">
+        <div class="row py-2 ">
+            <p class="fs-3 text-center fw-semibold ">Employee<b class="text-primary"> Login</b></p>
+            <div class="col-sm-4 mx-auto p-3 shadow-lg rounded-4 login m-0">
+                <h3 class="text-center mt-2 fw-semibold">Member<b class="text-mycolor "> Login<i class="fa-solid fa-key"></i></b></h3>
+                <div class="input-group flex-nowrap shadow-lg mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user text-primary"></i></span>
+                    <input type="text" name="userid" required class="form-control" placeholder="Enter Your UserID" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap shadow-lg mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-lock text-primary"></i></span>
+                    <input type="password" required name="password" class="form-control" placeholder="Enter Your Password" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <input type="submit" value="Login Now"
+                       class="bg-mycolor form-control mt-4 text-light" />
+            </div>
+        </div>
+    </div>
+</form>
